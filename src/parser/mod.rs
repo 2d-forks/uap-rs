@@ -33,7 +33,7 @@ pub enum Error {
 
 /// Handles the actual parsing of a user agent string by delegating to
 /// the respective `SubParser`
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct UserAgentParser {
     device_matchers: Vec<device::Matcher>,
     os_matchers: Vec<os::Matcher>,
